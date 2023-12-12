@@ -16,3 +16,5 @@
 - MyBatis
 - Tomcat
 - MariaDB
+
+## 프로젝트 PPT 위치: projectMovieSQ -> doc -> ixtx.ppt 
