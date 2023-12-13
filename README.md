@@ -37,10 +37,13 @@
 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d)
 
 
+![와이어프레임_메인])
+
+
 
 ## 와이어프레임
 <p align="center" width="100%">
-  <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/599b6a97-1aff-4ad1-a582-3f8cdd203764/5d04cbb7-67a1-452a-aa68-1595c61abe98/undefined_Untitled.png" align="left" width="20%" title="메인화면">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/824df618-bb5d-43b5-bbf2-4f5885c88ea0" align="left" width="20%" title="메인화면">
 </p>
 <p align="center" width="100%">
   <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/599b6a97-1aff-4ad1-a582-3f8cdd203764/5dfa3111-d1ce-4251-a41d-3c21acae8272/%EC%98%81%ED%99%94%EC%98%88%EB%A7%A4_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A1%9C%EA%B7%B8%EC%9D%B8.jpg" align="center" width="20%" title="로그인">
