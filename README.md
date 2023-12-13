@@ -2,18 +2,18 @@
 - 영화예매
 
 ## 팀원 및 담당기능 (4명)
-- 공통
-  사이트 와이어 프레임
-  DB 초안 작성
-  API 명세서 작성
-  담당 페이지 HTML/CSS/JS, Back-End
-  담당 페이지별 관리자 모드
-> - 오경아 (팀장) : 영화 목록, 상세 정보, 고객지원(공지사항, FAQ, 소식), DB 및 API 취합,
->                  마이페이지(관람내역), 프로젝트 관리
-> - 김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(카카오 로그인)
-                   계정찾기, 마이페이지(예매/취소내역, 회원정보수정), 결제 및 예매완료
-> - 박도현 (팀원) : 동적 상영 시간표, 영화 선택, 상영관 선택, 좌석 선택
-> - 이상민 (팀원) : 지역별 극장 목록, 극장 검색, 극장 정보(Kakaomaps API)
+ - 오경아 (팀장) : 영화 목록, 상세 정보, 고객지원(공지사항, FAQ, 소식), DB 및 API 취합,
+                  마이페이지(관람내역), 프로젝트 관리
+ - <b>김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(카카오 로그인)
+                   계정찾기, 마이페이지(예매/취소내역, 회원정보수정), 결제 및 예매완료</b>
+ - 박도현 (팀원) : 동적 상영 시간표, 영화 선택, 상영관 선택, 좌석 선택
+ - 이상민 (팀원) : 지역별 극장 목록, 극장 검색, 극장 정보(Kakaomaps API)
+> 공통
+> - 사이트 와이어 프레임
+> - DB 초안 작성
+> - API 명세서 작성
+> - 담당 페이지 HTML/CSS/JS, Back-End
+> - 담당 페이지별 관리자 모드
 
 ## 목표
 > 습득한 내용의 활용
@@ -69,10 +69,10 @@
 - 비밀번호 재설정 ( 이메일 인증 -> 비밀번호 재설정 링크 연결 ) 
 ```
 <p align="center" width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" width="25%" title="로그인">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/7a2f7336-4b2e-4e1f-82f8-cfe85a4d2a7e"  width="25%" title="회원가입">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/122e4375-6f7c-44bc-bb66-251b267ed4ca"  width="25%" title="아이디찾기">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e993c0da-b800-43bd-ae93-71cd99d6dbd4"  width="25%" title="비밀번호재설정">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" width="20%" title="로그인">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/7a2f7336-4b2e-4e1f-82f8-cfe85a4d2a7e"  width="20%" title="회원가입">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/122e4375-6f7c-44bc-bb66-251b267ed4ca"  width="20%" title="아이디찾기">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e993c0da-b800-43bd-ae93-71cd99d6dbd4"  width="20%" title="비밀번호재설정">
 </p>
 
 ### 마이페이지
@@ -111,8 +111,64 @@
 </p>
 
 ### 쿼리
+- 예매율 TOP 10 보이기
 ```
-
+SELECT (SUM(`reserve`.`ticket_total`) / SUM(`screen`.`seat_total`)) * 100 AS `reservationRate`,
+       `movie`.`index`                                                    AS `index`,
+       `movie`.`title_ko`                                                 AS `titleKo`,
+       `movie`.`title_en`                                                 AS `titleEn`,
+       `movie`.`rating`                                                   AS `rating`,
+       `movie`.`release_date`                                             AS `releaseDate`,
+       `movie`.`genre`                                                    AS `genre`,
+       `movie`.`running_time`                                             AS `runningTime`,
+       `movie`.`synopsis`                                                 AS `synopsis`,
+       `movie`.`director`                                                 AS `director`,
+       `movie`.`cast`                                                     AS `cast`,
+       `movie`.`agency`                                                   AS `agency`,
+       `movie`.`trailer_url`                                              AS `trailerUrl`,
+       `movie`.`status`                                                   AS `status`,
+       `movie`.`created_at`                                               AS `createdAt`
+FROM `movie_sq`.`screen_schedules` AS `sch`
+         INNER JOIN
+     `movie_sq`.`screens` AS `screen` ON `sch`.`screen_index` = `screen`.`index`
+         LEFT JOIN
+     `movie_sq`.`reservations` AS `reserve` ON `sch`.`index` = `reserve`.`screen_schedule_index`
+         LEFT JOIN
+     `movie_sq`.`movies` AS `movie` ON `sch`.`movie_index` = `movie`.`index`
+GROUP BY `movie`.`index`
+ORDER BY   `reservationRate` DESC,
+           `movie`.`index` ASC
+LIMIT 10;
+```
+- 예매취소내역(1개월이내)
+```
+  <select id="selectCancelReservationByEmail"
+            parameterType="com.ixtx.projectmoviesq.entities.UserEntity"
+            resultType="com.ixtx.projectmoviesq.dtos.TicketDto">
+        SELECT `reserve`.`index`              AS `index`,
+               `reserve`.`ticket_number`      AS `ticketNumber`,
+               `reserve`.`user_email`         AS `userEmail`,
+               `reserve`.`ticket_total`       AS `ticketTotal`,
+               `reserve`.`reserved_seat_name` AS `reservedSeatName`,
+               `reserve`.`payment_amount`     AS `paymentAmount`,
+               `reserve`.`canceled_at`        AS `canceledAt`,
+               `sch`.time_start               AS `timeStart`,
+               `sch`.`time_end`               AS `timeEnd`,
+               `sch`.`movie_index`            AS `movieIndex`,
+               `sch`.`screen_index`           AS `screenIndex`,
+               `sch`.`theater_index`          AS `theaterIndex`,
+               `movie`.`title_ko`             AS `titleKo`,
+               `theater`.`name`               AS `theaterName`,
+               `screen`.`name`                AS `screenName`
+        FROM `movie_sq`.`reservations` AS `reserve`
+                 LEFT JOIN `movie_sq`.`screen_schedules` AS `sch` ON `reserve`.`screen_schedule_index` = `sch`.`index`
+                 LEFT JOIN `movie_sq`.`movies` AS `movie` ON `sch`.`movie_index` = `movie`.`index`
+                 LEFT JOIN `movie_sq`.`theaters` AS `theater` ON `sch`.`theater_index` = `theater`.`index`
+                 LEFT JOIN `movie_sq`.`screens` AS `screen` ON `sch`.`screen_index` = `screen`.`index`
+        WHERE BINARY `user_email` = #{email}
+          AND `expired_flag` = true
+          AND `canceled_at` > DATE_SUB(NOW(), INTERVAL 1 MONTH);
+    </select>
 ```
 
 
@@ -126,6 +182,12 @@
 ![CryptoUtil](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f)
 
 ### 정규화 (회원정보 및 카드정보)
+![Regex](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/50939c5a-beaf-42b9-baac-5940dd9e5a6f)
 
+### 네이버 SMS API 연동 (인증번호 전송:회원가입 & ID 찾기, 예매완료 전송)
+<p width="100%">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5654ba94-546a-4231-ab8e-b5fb6532320d" width="40%" title="인증키생성">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/a690237f-cd84-4a44-84be-3f407ff343bd" width="40%" title="SMS API">
+</p>
 
 
