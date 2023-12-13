@@ -37,17 +37,31 @@
 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d)
 
 
-![와이어프레임_메인])
-
-
-
 ## 와이어프레임
+### 홈(메인화면)
+```
+- TOP 10만 유지, 2줄로 보이기(예매율 기준)
+- 영화소식 : 일단 제외 -> 다시 진행 : 메인화면 빈 느낌
+- 영화광고 포스터 : 유지
+```
 <p align="center" width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/824df618-bb5d-43b5-bbf2-4f5885c88ea0" align="left" width="20%" title="메인화면">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/824df618-bb5d-43b5-bbf2-4f5885c88ea0" align="center" width="30%" title="메인화면" >
 </p>
+
+### 로그인/회원가입
+```
+- 로그인 ( 로그인 여부 알려주기 : 불일치, 정지 )
+- 회원가입(3단계로 구분)
+  - 첫번째 단계 : 휴대폰 본인 인증
+  - 두번쨰 단계 : 서비스 이용약관/개인정보 수집 동의
+  - 세번째 단계 : 회원정보
+```
 <p align="center" width="100%">
-  <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/599b6a97-1aff-4ad1-a582-3f8cdd203764/5dfa3111-d1ce-4251-a41d-3c21acae8272/%EC%98%81%ED%99%94%EC%98%88%EB%A7%A4_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A1%9C%EA%B7%B8%EC%9D%B8.jpg" align="center" width="20%" title="로그인">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" align="center" width="30%" title="로그인">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/7a2f7336-4b2e-4e1f-82f8-cfe85a4d2a7e" align="center" width="30%" title="회원가입">
 </p>
+
+### 마이페이지
 <p align="center" width="100%">
   <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/599b6a97-1aff-4ad1-a582-3f8cdd203764/ba4c2b3b-67f8-4031-a63c-0e01184bae3f/05_03_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80_%ED%9A%8C%EC%9B%90_%ED%99%95%EC%9D%B8_%EC%96%91%EC%8B%9D.png" align="center" width="20%" title="마이페이지-회원확인">
   <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/599b6a97-1aff-4ad1-a582-3f8cdd203764/9c4a3543-cea7-45a3-9b60-fe3a8f59b68a/%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%EC%96%91%EC%8B%9D_Untitled.png" align="center" width="20%" title="마이페이지-회원정보수정">
