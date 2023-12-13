@@ -2,11 +2,18 @@
 - 영화예매
 
 ## 팀원 및 담당기능 (4명)
-- 담당 기능 프론트/백엔드 모두 진행
-> 오경아 (팀장)
-> 김혜리 (팀원)
-> 박도현 (팀원)
-> 이상민 (팀원)
+- 공통
+  사이트 와이어 프레임
+  DB 초안 작성
+  API 명세서 작성
+  담당 페이지 HTML/CSS/JS, Back-End
+  담당 페이지별 관리자 모드
+> - 오경아 (팀장) : 영화 목록, 상세 정보, 고객지원(공지사항, FAQ, 소식), DB 및 API 취합,
+>                  마이페이지(관람내역), 프로젝트 관리
+> - 김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(카카오 로그인)
+                   계정찾기, 마이페이지(예매/취소내역, 회원정보수정), 결제 및 예매완료
+> - 박도현 (팀원) : 동적 상영 시간표, 영화 선택, 상영관 선택, 좌석 선택
+> - 이상민 (팀원) : 지역별 극장 목록, 극장 검색, 극장 정보(Kakaomaps API)
 
 ## 목표
 > 습득한 내용의 활용
@@ -30,7 +37,11 @@
 
 # 프로젝트 진행 
 ## 1. 요구사항 정리
-
+```
+이메일 인증/전화번호 인증, 아이디 찾기, 비밀번호 재설정 - 회원가입, 로그인
+게시판, 페이징 - 공지사항 또는 FAQ
+지도 API - 극장 정보 페이지
+```
 
 ## 2. UML 
 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d)
@@ -58,10 +69,10 @@
 - 비밀번호 재설정 ( 이메일 인증 -> 비밀번호 재설정 링크 연결 ) 
 ```
 <p align="center" width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" align="center" width="25%" title="로그인">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/7a2f7336-4b2e-4e1f-82f8-cfe85a4d2a7e" align="center" width="25%" title="회원가입">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/122e4375-6f7c-44bc-bb66-251b267ed4ca" align="center" width="25%" title="아이디찾기">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e993c0da-b800-43bd-ae93-71cd99d6dbd4" align="center" width="25%" title="비밀번호재설정">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" width="25%" title="로그인">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/7a2f7336-4b2e-4e1f-82f8-cfe85a4d2a7e"  width="25%" title="회원가입">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/122e4375-6f7c-44bc-bb66-251b267ed4ca"  width="25%" title="아이디찾기">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e993c0da-b800-43bd-ae93-71cd99d6dbd4"  width="25%" title="비밀번호재설정">
 </p>
 
 ### 마이페이지
@@ -70,9 +81,9 @@
 - 회원정보수정 (본인확인 -> 정보수정)
 ```
 <p align="center" width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c572122a-ca06-4d99-b378-14a680e423bb" align="center" width="20%" title="마이페이지-예매/취소내역">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/8995b3bf-89f9-400f-9c47-c6d8e811fc5f" align="center" width="20%" title="본인확인">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/6372dc42-c849-454b-b4b8-2da6a8a9037c" align="center" width="20%" title="마이페이지-정보수정">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c572122a-ca06-4d99-b378-14a680e423bb" align="center" width="30%" title="마이페이지-예매/취소내역">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/8995b3bf-89f9-400f-9c47-c6d8e811fc5f" align="center" width="30%" title="본인확인">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/6372dc42-c849-454b-b4b8-2da6a8a9037c" align="center" width="30%" title="마이페이지-정보수정">
 </p>
 
 ### 결제/예매완료(실제 결제x) 
@@ -90,12 +101,31 @@
 ## 4. DB설계 (ERD)
 ### 초안
 <p width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e1399d7f-b6e6-49d3-b644-2a996e4ab032" width="30%" align="center" title="1안">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c5d3bd8d-94ea-4ab5-be5b-66bf53579035" width="30%" align="center" title="2안">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e1399d7f-b6e6-49d3-b644-2a996e4ab032" width="40%" align="center" title="1안">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c5d3bd8d-94ea-4ab5-be5b-66bf53579035" width="40%" align="center" title="2안">
 </p>
 
 ### 완성본
 <p>
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d8219a22-cc83-4eaf-84f6-893714a87373" width="30%" align="" title="완성본">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d8219a22-cc83-4eaf-84f6-893714a87373" width="50%" align="" title="완성본">
 </p>
-  
+
+### 쿼리
+```
+
+```
+
+
+## 5. API 명세서
+<p>
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5c050f64-d19b-4a9e-81a3-f7d51fa04ab9" width="" title="">
+</p>
+
+## 6. 개발 
+### 암호화 Util (비밀번호 및 카드번호)
+![CryptoUtil](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f)
+
+### 정규화 (회원정보 및 카드정보)
+
+
+
