@@ -4,8 +4,10 @@
 ## 팀원 및 담당기능 (4명)
  - 오경아 (팀장) : 영화 목록, 상세 정보, 고객지원(공지사항, FAQ, 소식), DB 및 API 취합,
                   마이페이지(관람내역), 프로젝트 관리
- - <b>김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(카카오 로그인)
+ - <b>김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(+ 카카오 간편 로그인)
                    계정찾기, 마이페이지(예매/취소내역, 회원정보수정), 결제 및 예매완료</b>
+   > - 회원가입, 아이디 찾기(휴대폰인증)
+   > - 비밀번호 재설정(이메일 인증) 
  - 박도현 (팀원) : 동적 상영 시간표, 영화 선택, 상영관 선택, 좌석 선택
  - 이상민 (팀원) : 지역별 극장 목록, 극장 검색, 극장 정보(Kakaomaps API)
 > 공통
@@ -16,20 +18,28 @@
 > - 담당 페이지별 관리자 모드
 
 ## 목표
-> 습득한 내용의 활용
-> 팀원간 창의적 디지털 협업
-> 개발 프로세스의 이해
-> 효율적인 커뮤니케이션 
+> - 습득한 내용의 활용
+> - 팀원간 창의적 디지털 협업
+> - 개발 프로세스의 이해
+> - 효율적인 커뮤니케이션 
 
 ## 개발 도구 및 환경 
-- HTML5/Javascript5/css3   ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5be09c54-5406-43c3-ba57-8b0d0e527480)
-- JAVA 11 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5314580a-eaa8-42ac-8345-3756384aafce)
-- IntelliJ   ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ace8628c-584a-4df8-be27-01d5753d4345)
-- Spring Boot 2.7.12 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/49b5ae87-d8c4-4d03-bc65-351295d90b27)
-- MyBatis 2.3.0 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d0deee0a-9cd9-4974-b34e-750c31ce780d)
+<p align="center"> 
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5be09c54-5406-43c3-ba57-8b0d0e527480"  width="32%"  height="100" align="center" >
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5314580a-eaa8-42ac-8345-3756384aafce" width="32%" height="100"  align="center">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ea1271dd-d59d-47cb-a7be-b1bca7dacfa6" width="32%" height="100" align="center"> 
+   <div align="center">HTML5/CSS3/JavaScript5, JAVA 11, MariaDB 3.1.3</div>
+</p>
+    
+<p align="center">  
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/49b5ae87-d8c4-4d03-bc65-351295d90b27" width="32%" height="100" align="center">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ace8628c-584a-4df8-be27-01d5753d4345" width="32%" height="100" align="center" >
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d0deee0a-9cd9-4974-b34e-750c31ce780d" width="32%" height="100" align="center">
+   <div align="center">Spring Boot 2.7.12, InteliJ, Mybatis2.3.0</div>
+</p>
+
 - Tomcat
 - Maven 4.0.0
-- MariaDB 3.1.3 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ea1271dd-d59d-47cb-a7be-b1bca7dacfa6)
 - NCloud SMS API
 - Java Mail API
 - Kakao Maps API
@@ -190,4 +200,47 @@ LIMIT 10;
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/a690237f-cd84-4a44-84be-3f407ff343bd" width="40%" title="SMS API">
 </p>
 
+### 카카오 간편 로그인 
+- 회원가입 후 개인정보수정에서 카카오 간편 로그인 연결 및 해제 가능
+  #### 연결
+  <p width="100%">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/3a88e130-0303-4a7d-9ffc-691a5b0b43fe" width="45%" height="250" alt="연결">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e089c3ad-f861-4d13-bb53-3a3246a5284e" width="45%" height="250" alt="연결알람">
+  </p>
+  
+  #### 해제
+  <p width="100%">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/08ea2eb5-7540-4cd6-984e-5a82dcc0975e" width="45%" height="250" alt="해제">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ffdd95e8-077d-4ada-9def-f3481ae3e864" width="45%" height="250" alt="연결해제">
+  </p>
+  
+- 카카오 미연동상태에서 카카오 로그인 시도
+  <p width="100%">
+   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/cda301c7-f20d-4630-bf92-3187f5db950a" width="45%" height="250">
+  </p>
 
+- 카드결제 (카드번호 앞 6자리, 카드회사 사용가능여부 확인 후 결제 진행)
+  #### 잘못된 카드정보
+   <p width="100%">
+    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/86bed0a2-411a-4ed1-b5ad-c0b2eb8f3140" width="70%" height="250">
+   </p>
+
+
+
+## 7. 도메인 , 서버, 배포
+### 도메인구매 (가이아, moviesq.herrykim.com)
+
+### 서버 구축 (Cloudflare)
+
+### 배포 (GCP,Google Cloud Platform)
+
+
+## 개선사항 및 아쉬운점 
+1. 동일한 날짜의 영화 스케쥴 1개만 보임
+```
+```
+2. 예매율 -> 현재 상영중인 영화를 대상으로함
+```
+**selectTopTenMovies** 
+WHERE `movie`.`status` != 'NOT_PLAYING' 추가 필요! 
+```
