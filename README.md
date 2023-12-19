@@ -237,11 +237,11 @@ LIMIT 10;
 
 
 ## 7. 도메인 , 서버, 배포
-### 도메인구매 (가이아, moviesq.herrykim.com)
+### 도메인 구매 (가이아, moviesq.herrykim.com)
 
-### 서버 구축 (Cloudflare)
+###  DNS (Cloudflare)
 
-### 배포 (GCP,Google Cloud Platform)
+### 서버 구축 및 배포 (GCP,Google Cloud Platform)
 
 
 ### 협업 
