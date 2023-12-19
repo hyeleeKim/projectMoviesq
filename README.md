@@ -28,7 +28,7 @@
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5be09c54-5406-43c3-ba57-8b0d0e527480"  width="32%"  height="100" align="center" >
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5314580a-eaa8-42ac-8345-3756384aafce" width="32%" height="100"  align="center">
    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ea1271dd-d59d-47cb-a7be-b1bca7dacfa6" width="32%" height="100" align="center"> 
-   <div align="center">HTML5/CSS3/JavaScript5, JAVA 11, MariaDB 3.1.3</div>
+   <div align="center">HTML5/CSS3/JavaScript, JAVA 11, MariaDB 3.1.3</div>
 </p>
     
 <p align="center">  
