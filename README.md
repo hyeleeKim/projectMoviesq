@@ -41,9 +41,9 @@
  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/831a4d4d-baba-48b8-b27b-f2f457a4e398" width="45%">
 </p>
 
-## 🏛️ 시스템 아키텍쳐
-<p width="100%">
- <img src="" width="">
+## 🏛️ 아키텍쳐
+<p width="100%" align="center">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/98c50d05-9632-4ad0-ace3-00746f289562" width="600px" align="center" >
 </p>
 
 ## 🧾 API 명세서
