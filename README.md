@@ -1,61 +1,52 @@
-# 프로젝트 소개 (2023.05.12 ~ 2023.08.17)
-- 영화예매
+# 📢 프로젝트 소개 (2023.05.12 ~ 2023.08.17)
+<p width="100%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/0a695659-56be-445e-9a7d-ebb3ad47d3bf" width="20%">
+</p>
+- 영화 정보 및 관련 소식 제공과 함께 상영관 예매 서비스를 제공
 
-## 팀원 및 담당기능 (4명)
- - 오경아 (팀장) : 영화 목록, 상세 정보, 고객지원(공지사항, FAQ, 소식), DB 및 API 취합,
-                  마이페이지(관람내역), 프로젝트 관리
- - <b>김혜리 (팀원) : 홈(광고, 영화 순위, 공지사항), 회원가입, 로그인(+ 카카오 간편 로그인),
-                   계정찾기, 마이페이지(예매/취소내역, 회원정보수정), 결제진행 및 예매완료</b>
-   > - 회원가입, 아이디 찾기(휴대폰인증) ->NCloud SMS API
-   > - 비밀번호 재설정(이메일 링크 제공)  -> Java Mail API
-   > - 카카오 간편 로그인 -> KakaoLogin API 
- - 박도현 (팀원) : 동적 상영 시간표, 영화 선택, 상영관 선택, 좌석 선택
- - 이상민 (팀원) : 지역별 극장 목록, 극장 검색, 극장 정보(Kakaomaps API)
-> 공통
+## 🔗 담당기능
+- **홈** (광고, 영화 TOP 10 , 최근 공지사항 및 영화 소식)
+- **회원가입, 로그인**(+ 카카오 간편 로그인), **ID찾기 & 비밀번호 재설정**
+    - 회원가입 ,아이디 찾기 (NCloud SMS API)
+    - 비밀번호 재설정 ( Java Mail API )
+    - 카카오 간편 로그인 (Kakao Login API)
+- **마이페이지**(예매/취소내역, 회원정보수정)
+- **결제진행** 및 **예매완료** ( NCloud SMS API)
+- **관리자 모드** ( 광고 CRUD )
+> 📌 **공통**
 > - 사이트 와이어 프레임
 > - DB 초안 작성
 > - API 명세서 작성
 > - 담당 페이지 Front-End, Back-End 
 > - 담당 페이지별 관리자 모드
 
-## 목표
-> - 습득한 내용의 활용
-> - 팀원간 창의적 디지털 협업
-> - 개발 프로세스의 이해
-> - 효율적인 커뮤니케이션 
 
 ## 개발 도구 및 환경 
-<p align="center"> 
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5be09c54-5406-43c3-ba57-8b0d0e527480"  width="32%"  height="100" align="center" >
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5314580a-eaa8-42ac-8345-3756384aafce" width="32%" height="100"  align="center">
-   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ea1271dd-d59d-47cb-a7be-b1bca7dacfa6" width="32%" height="100" align="center"> 
-   <div align="center">HTML5/CSS3/JavaScript, JAVA 11, MariaDB 3.1.3</div>
-</p>
-    
-<p align="center">  
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/49b5ae87-d8c4-4d03-bc65-351295d90b27" width="32%" height="100" align="center">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/ace8628c-584a-4df8-be27-01d5753d4345" width="32%" height="100" align="center" >
-   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d0deee0a-9cd9-4974-b34e-750c31ce780d" width="32%" height="100" align="center">
-   <div align="center">Spring Boot 2.7.12, InteliJ, Mybatis2.3.0</div>
-</p>
-- Tomcat
-- Maven 4.0.0
-- thymeleaf 
-- Kakao Maps API
-- CKEditor
+- **`JAVA 11`**
+- **`Spring Boot 2.7.12`**, **`Mybatis 2.3.0`**, **`thymeleaf`**
+- **`Kakao Maps API`**, **`Kakao Login API`**
+- **`NCloud SMS API`**
+- **`MariaDB 3.1.3`**
+- **`Cloudflare`**, **`Google Cloud platform`**
 
-# 프로젝트 진행 
-## 1. 요구사항 정리
-```
-이메일 인증/전화번호 인증, 아이디 찾기, 비밀번호 재설정 - 회원가입, 로그인
-게시판, 페이징 - 공지사항 또는 FAQ
-지도 API - 극장 정보 페이지
-```
+## **협업 Tool**
+- **`GitHub`** : 코드 공유
+- **`Notion`** (팀 스페이스) : PJ 전반적인 진행 과정 및 회의 내용 
 
-## 2. UML 
+## UML & ERD  
 ![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d)
 
-## 3. 와이어프레임
+## 시스템 아키텍쳐
+<p width="100%">
+ <img src="" width="">
+</p>
+
+## API 명세서
+<p width="100%">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5c050f64-d19b-4a9e-81a3-f7d51fa04ab9" width="300px" height="350px">
+</p>
+
+## 와이어프레임
 ### 홈(메인화면)
 ```
 - 영화광고 포스터 : 유지 -> admin 관리할 수 있도록 구현
@@ -73,16 +64,13 @@
 
 ### 로그인/회원가입/ID 찾기 & PW 재설정
 ```
-- 로그인 ( 로그인 여부 알려주기 : 불일치, 정지 )
- - 카카오 간편 로그인 (마이페이지 연동 시 가능하도록 구현)
- - 이메일 저장 
-
-- 회원가입( 3단계로 구분)
-  1. 첫번째 단계 : 휴대폰 본인 인증
-  2. 두번쨰 단계 : 서비스 이용약관/개인정보 수집 동의
-  3. 세번째 단계 : 회원정보 ( 이메일 / 비밀번호 / 이름 / 생년월일 ) 
+- 로그인 ( 로그인 여부 알려주기 : 불일치, 정지 )회원가입( 3단계로 구분)
+    - 1단계 : 휴대폰 본인 인증
+    - 2단계 : 서비스 이용약관/개인정보 수집 동의
+    - 3단계 : 회원정보 ( 이메일 / 비밀번호 / 이름 / 생년월일 )
+- 카카오 간편 로그인 ( 마이페이지 연동 시 가능하도록 구현)
 - ID 찾기 ( 이름 , 생년월일 동일한 회원 확인 후  연락처 인증 후 제 )
-- 비밀번호 재설정 ( 이메일 인증 -> 비밀번호 재설정 링크 연결 ) 
+- 비밀번호 재설정 ( 이메일 인증 -> 비밀번호 재설정 링크 연결 )
 ```
 <p align="center" width="100%">
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/9f616afa-836b-4931-9156-b8c73dfead4c" width="20%" title="로그인">
@@ -117,91 +105,25 @@
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/789fbbca-0a3a-4dcf-985d-91b255f13c95" width="30%" align="center" title="결제및예매완료">
 </p>
 
-## 4. DB설계 (ERD)
-### 초안
-<p width="100%">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e1399d7f-b6e6-49d3-b644-2a996e4ab032" width="40%" align="center" title="1안">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c5d3bd8d-94ea-4ab5-be5b-66bf53579035" width="40%" align="center" title="2안">
-</p>
-
-### 완성본
-<p>
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d8219a22-cc83-4eaf-84f6-893714a87373" width="100%" align="" title="완성본">
-</p>
-
-### 쿼리
-- 예매율 TOP 10 보이기
 ```
-SELECT (SUM(`reserve`.`ticket_total`) / SUM(`screen`.`seat_total`)) * 100 AS `reservationRate`,
-       `movie`.`index`                                                    AS `index`,
-       `movie`.`title_ko`                                                 AS `titleKo`,
-       `movie`.`title_en`                                                 AS `titleEn`,
-       `movie`.`rating`                                                   AS `rating`,
-       `movie`.`release_date`                                             AS `releaseDate`,
-       `movie`.`genre`                                                    AS `genre`,
-       `movie`.`running_time`                                             AS `runningTime`,
-       `movie`.`synopsis`                                                 AS `synopsis`,
-       `movie`.`director`                                                 AS `director`,
-       `movie`.`cast`                                                     AS `cast`,
-       `movie`.`agency`                                                   AS `agency`,
-       `movie`.`trailer_url`                                              AS `trailerUrl`,
-       `movie`.`status`                                                   AS `status`,
-       `movie`.`created_at`                                               AS `createdAt`
-FROM `movie_sq`.`screen_schedules` AS `sch`
-         INNER JOIN
-     `movie_sq`.`screens` AS `screen` ON `sch`.`screen_index` = `screen`.`index`
-         LEFT JOIN
-     `movie_sq`.`reservations` AS `reserve` ON `sch`.`index` = `reserve`.`screen_schedule_index`
-         LEFT JOIN
-     `movie_sq`.`movies` AS `movie` ON `sch`.`movie_index` = `movie`.`index`
-GROUP BY `movie`.`index`
-ORDER BY   `reservationRate` DESC,
-           `movie`.`index` ASC
-LIMIT 10;
+- 카드결제 (카드번호 앞 6자리, 카드회사 사용가능여부 확인 후 결제 진행)
 ```
-- 예매취소내역(1개월이내)
-```
-  <select id="selectCancelReservationByEmail"
-            parameterType="com.ixtx.projectmoviesq.entities.UserEntity"
-            resultType="com.ixtx.projectmoviesq.dtos.TicketDto">
-        SELECT `reserve`.`index`              AS `index`,
-               `reserve`.`ticket_number`      AS `ticketNumber`,
-               `reserve`.`user_email`         AS `userEmail`,
-               `reserve`.`ticket_total`       AS `ticketTotal`,
-               `reserve`.`reserved_seat_name` AS `reservedSeatName`,
-               `reserve`.`payment_amount`     AS `paymentAmount`,
-               `reserve`.`canceled_at`        AS `canceledAt`,
-               `sch`.time_start               AS `timeStart`,
-               `sch`.`time_end`               AS `timeEnd`,
-               `sch`.`movie_index`            AS `movieIndex`,
-               `sch`.`screen_index`           AS `screenIndex`,
-               `sch`.`theater_index`          AS `theaterIndex`,
-               `movie`.`title_ko`             AS `titleKo`,
-               `theater`.`name`               AS `theaterName`,
-               `screen`.`name`                AS `screenName`
-        FROM `movie_sq`.`reservations` AS `reserve`
-                 LEFT JOIN `movie_sq`.`screen_schedules` AS `sch` ON `reserve`.`screen_schedule_index` = `sch`.`index`
-                 LEFT JOIN `movie_sq`.`movies` AS `movie` ON `sch`.`movie_index` = `movie`.`index`
-                 LEFT JOIN `movie_sq`.`theaters` AS `theater` ON `sch`.`theater_index` = `theater`.`index`
-                 LEFT JOIN `movie_sq`.`screens` AS `screen` ON `sch`.`screen_index` = `screen`.`index`
-        WHERE BINARY `user_email` = #{email}
-          AND `expired_flag` = true
-          AND `canceled_at` > DATE_SUB(NOW(), INTERVAL 1 MONTH);
-    </select>
-```
+   <p width="100%">
+    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/86bed0a2-411a-4ed1-b5ad-c0b2eb8f3140" width="70%" height="250">
+   </p>
 
-
-## 5. API 명세서
-<p>
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5c050f64-d19b-4a9e-81a3-f7d51fa04ab9" width="" title="">
-</p>
-
-## 6. 개발 
+## 개발 
 ### 암호화 Util (비밀번호 및 카드번호)
-![CryptoUtil](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f)
+<p width="100%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f" width="40%">
+</p>
+
 
 ### 정규화 (회원정보 및 카드정보)
 ![Regex](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/50939c5a-beaf-42b9-baac-5940dd9e5a6f)
+<p width="100%">
+ <img src="" width="">
+</p>
 
 ### 네이버 SMS API 연동 (인증번호 전송:회원가입 & ID 찾기, 예매완료 전송)
 <p width="100%">
@@ -228,42 +150,107 @@ LIMIT 10;
    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/cda301c7-f20d-4630-bf92-3187f5db950a" width="45%" height="250">
   </p>
 
-- 카드결제 (카드번호 앞 6자리, 카드회사 사용가능여부 확인 후 결제 진행)
-  #### 잘못된 카드정보
-   <p width="100%">
-    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/86bed0a2-411a-4ed1-b5ad-c0b2eb8f3140" width="70%" height="250">
-   </p>
-
-
-
-## 7. 도메인 , 서버, 배포
+## 도메인 , 서버, 배포
 ### 도메인 구매 (가이아, moviesq.herrykim.com)
-
 ###  DNS (Cloudflare)
-
 ### 서버 구축 및 배포 (GCP,Google Cloud Platform)
 
+## 🚨 오류 수정 및 리팩토링
 
-### 협업 
-- 노션 (팀 스페이스) 활용
-- 깃허브 (코드 공유)
+1️⃣ **문제점 : 동일한 날짜의 영화 스케쥴 1개만 보임**
+- **파악**
+    - 모든 예매 스케쥴  1개만 보임 → 동일한 영화,상영관,날짜 다른 시간의 스케쥴 2개 추가 후 다시  확인하였으나 1개만 보이는 상황 발견
+- **해결방안:** SQL 쿼리 수정 (Group by 잘못된 설정)
+    - **처음**
+    
+    ```sql
+    SELECT `A`.`index`                             AS `scheduleIndex`,
+    					CONCAT(DATE_FORMAT(`A`.`time_start`, '%H:%i'), '~',
+    	                      DATE_FORMAT(`A`.`time_end`, '%H:%i'))     AS 'runningTime',
+    					`B`.`name`                           AS `screenName`,
+    					`B`.`seat_total`                     AS `seatTotal`,
+    					COUNT(`E`.`schedule_index`)          AS `occupiedSeatTotal`
+    FROM `movie_sq`.`screen_schedules` AS `A`
+    			LEFT JOIN `movie_sq`.`screens` AS `B` ON `A`.`screen_index` = `B`.`index`
+    			LEFT JOIN `movie_sq`.`movies` AS `C` ON `A`.`movie_index` = `C`.`index`
+    			LEFT JOIN `movie_sq`.`theaters` AS `D` ON `A`.`theater_index` = `D`.`index`
+    			LEFT JOIN `movie_sq`.`reservation_status` AS `E` ON `A`.`index` = `E`.`schedule_index`
+    WHERE `D`.`name` = #{theaterName} &&
+    			`C`.`title_ko` = #{movieName} &&
+    			DATE_FORMAT(`A`.`time_start`, '%Y-%m-%d') = #{timeName} &&
+    			`A`.`time_start` > NOW()
+    GROUP BY `E`.`schedule_index`;**
+    ```
+    
+    - **수정**
+    
+    ```sql
+     --동일함
+    GROUP BY  A.`index`, `runningTime`, `screenName`, `seatTotal`;**
+    ```    
+   
+  <p width="100%">
+ <img src="" width="">
+</p>
 
-## 리팩토링 
-1. 동일한 날짜의 영화 스케쥴 1개만 보임
-```
-
-```
-
-2. 예매율 -> 현재 상영중인 영화를 대상으로함
-```
-**selectTopTenMovies** 
-WHERE `movie`.`status` != 'NOT_PLAYING' 추가 필요! 
-```
-
-3. 영화 예매 번호 (날짜 8자리 + 랜덤숫자 8자리) 중복 가능성 확인
 
 
-4. 홈 광고화면 업로드 지연 문제
-```
+2️⃣ **문제점 : 회원가입 없이 카카오 간편 로그인 진행 어려움**
+> - DB User의 contact column NOT NULL 설정
+> - User 테이블의 contact 칼럼과  contact_code 테이블의 contact 칼럼과 FK 설정    
+>    → 사용자의 연락처 인증, 연락처 정보 없이 회원등록 불가능!   
+> - 그러나 카카오 개발 모드에서 사용자 연락처 정보를 가져올 수 없음
+- **파악**
+    - 카카오 로그인  → 회원 기본 정보 가져온 후 User table 데이터 insert하려고 시도했으나 오류 발생
+- **해결방안 : 회원이 카카오 로그인 연동 시 가능하도록 기획변경**
+    - User 테이블에 kakao_email 칼럼, kakao_linked_flag 칼럼 추가
+    - 첫 연동시 kakao_eamil 칼럼에 정보 추가 및 kakao_linked_flag true 변경
+    - 연결 해제시 kakao_linked flag false 변경
+    - 각 상황에 따른 popUp 보여주도록 설정
 
-```
+3️⃣ **문제점 : 영화예매 번호 랜덤 생성 → 번호 중복 가능성 확인**
+- **파악**
+    - 코드 재확인 과정에서 사용자가 많으면 중복될 수 도 있지 않을까 하는 생각을 함
+    - 다음의 코드를 통해 중복 가능성 확인   
+   <p width="100%">
+    <img src="" width="">
+   </p>
+
+- **해결방안 : 번호 중복 확인하는 메서드 추가**
+    - do-while문 사용하여 예매번호 생성 후 중복 여부 확인
+    - 중복 없으면 그대로 사용
+    - 중복 있으면 번호 다시 생성
+   
+    ```java
+    public String generateTicketNumber() {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+            String current = sdf.format(new Date());
+            String ticketNumber;
+            do {
+                ticketNumber = String.format("%s%s", current, RandomStringUtils.randomNumeric(8));
+            } while (this.getInformationByTicketNumber(ticketNumber).get("ticketNumber") != null);
+            return ticketNumber;
+    	    }
+    ```
+
+4️⃣ **문제점 : 홈 로딩 지연**
+- **해결방안 1**
+    - 광고 화면 부트스트랩 캐러셀 형식 활용        
+        → 부트스트랩에서 제공하는 요소에 대한 설정된 속성에 대한 분석과 이해
+    - **`thymeleaf:each`** 의 count, index속성, **`thymeleaf:attr`** 활용
+- **해결방안 2**
+    - 기존 : TOP10 예고편 팝업 10개 모두 가져오기
+    - 변경 : 팝업 1개에 호출 시 해당 예고편의 src 불러오는 방식으로 변경
+- **결과**
+    - **변경 전**
+      <p width="100%">
+       <img src="" width="">
+      </p>
+    - **변경 후**
+      <p width="100%">
+       <img src="" width="">
+      </p>
+      
+        -> **DOMContentLoaded**: 4.45s -> 3.45s 약 22% 감소
+        -> **Load** : 22.40s → 5.33 약 76% 감소
+    
