@@ -1,4 +1,4 @@
-# 📢 프로젝트 소개 (2023.05.12 ~ 2023.08.17)
+# 📢 프로젝트 소개 (2023.05.16 ~ 2023.08.17)
 <p width="100%">
  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/0a695659-56be-445e-9a7d-ebb3ad47d3bf" width="20%">
 </p>
