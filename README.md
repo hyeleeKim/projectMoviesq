@@ -2,6 +2,8 @@
 <p width="100%">
  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/0a695659-56be-445e-9a7d-ebb3ad47d3bf" width="20%">
 </p>
+
+- https://moviesq.herrykim.com
 - 영화 정보 및 관련 소식 제공과 함께 상영관 예매 서비스를 제공
 
 ## 🔗 담당기능
@@ -21,7 +23,7 @@
 > - 담당 페이지별 관리자 모드
 
 
-## 개발 도구 및 환경 
+## 🛠 개발 도구 및 환경 
 - **`JAVA 11`**
 - **`Spring Boot 2.7.12`**, **`Mybatis 2.3.0`**, **`thymeleaf`**
 - **`Kakao Maps API`**, **`Kakao Login API`**
@@ -33,21 +35,24 @@
 - **`GitHub`** : 코드 공유
 - **`Notion`** (팀 스페이스) : PJ 전반적인 진행 과정 및 회의 내용 
 
-## UML & ERD  
-![image](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d)
+## 🗂️ UML & ERD  
+<p width="100%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5bc306ad-f021-45a8-b439-3c753384cd1d" width="45%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/831a4d4d-baba-48b8-b27b-f2f457a4e398" width="45%">
+</p>
 
-## 시스템 아키텍쳐
+## 🏛️ 시스템 아키텍쳐
 <p width="100%">
  <img src="" width="">
 </p>
 
-## API 명세서
+## 🧾 API 명세서
 <p width="100%">
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5c050f64-d19b-4a9e-81a3-f7d51fa04ab9" width="300px" height="350px">
 </p>
 
-## 와이어프레임
-### 홈(메인화면)
+## 🖼️ 와이어프레임
+### 🏠 홈(메인화면)
 ```
 - 영화광고 포스터 : 유지 -> admin 관리할 수 있도록 구현
 - TOP 10만 유지, 2줄로 보이기(예매율 기준)
@@ -62,7 +67,7 @@
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/824df618-bb5d-43b5-bbf2-4f5885c88ea0" align="center" width="30%" title="메인화면" >
 </p>
 
-### 로그인/회원가입/ID 찾기 & PW 재설정
+### 🏠 로그인/회원가입/ID 찾기 & PW 재설정
 ```
 - 로그인 ( 로그인 여부 알려주기 : 불일치, 정지 )회원가입( 3단계로 구분)
     - 1단계 : 휴대폰 본인 인증
@@ -79,7 +84,7 @@
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e993c0da-b800-43bd-ae93-71cd99d6dbd4"  width="20%" title="비밀번호재설정">
 </p>
 
-### 마이페이지
+### 👤 마이페이지
 ```
 - 예매내역(관람 가능 내역) / 취소내역(최근 1개월 이내)
 - 회원정보수정 
@@ -93,7 +98,7 @@
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/6372dc42-c849-454b-b4b8-2da6a8a9037c" align="center" width="30%" title="마이페이지-정보수정">
 </p>
 
-### 결제/예매완료(실제 결제x) 
+### 💳 결제/예매완료(실제 결제x) 
 ```
 - 결제하기(카드결제시 다음으로 넘어가도록)
  - 카드 앞6자리 번호와 DB에 저장된 카드사별 지정번호 일치여부 확인 후 결제완료
@@ -101,8 +106,8 @@
 ```
 <p align="center width="100%">
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/c1c75253-bba5-4a3b-8fca-8e0a0d95b336" width="30%" align="center" title="결제선택">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/e98c2f3d-5d64-4807-aac8-f23cd8fa1410" width="30%" align="center" title="카드정보입력">
-  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/789fbbca-0a3a-4dcf-985d-91b255f13c95" width="30%" align="center" title="결제및예매완료">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/2e71b07a-e4ac-464e-97fe-0b7ecfed8185" width="30%" align="center" title="카드정보입력">
+  <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/58e955d3-f0d0-4618-b503-c5a45053bca0" width="30%" align="center" title="결제및예매완료">
 </p>
 
 ```
@@ -112,26 +117,30 @@
     <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/86bed0a2-411a-4ed1-b5ad-c0b2eb8f3140" width="70%" height="250">
    </p>
 
-## 개발 
-### 암호화 Util (비밀번호 및 카드번호)
+## 🧾 개발 
+### 🔑 암호화 Util (비밀번호 및 카드번호)
 <p width="100%">
- <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f" width="40%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/d5c37c4e-21dd-4bac-8951-5edcf5bb830f" width="60%">
 </p>
 
 
-### 정규화 (회원정보 및 카드정보)
-![Regex](https://github.com/hyeleeKim/projectMoviesq/assets/128495690/50939c5a-beaf-42b9-baac-5940dd9e5a6f)
+### ⚙ 정규화 (회원정보 및 카드정보)
 <p width="100%">
- <img src="" width="">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/50939c5a-beaf-42b9-baac-5940dd9e5a6f" width="60%">
 </p>
 
-### 네이버 SMS API 연동 (인증번호 전송:회원가입 & ID 찾기, 예매완료 전송)
+### 🗨️ NCloud SMS API 연동
 <p width="100%">
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/5654ba94-546a-4231-ab8e-b5fb6532320d" width="40%" title="인증키생성">
   <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/a690237f-cd84-4a44-84be-3f407ff343bd" width="40%" title="SMS API">
 </p>
+<p width="100%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/622c6e7d-bdc8-4671-b960-0d77b35025f9" width="30%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/a4e415dc-395e-438b-8410-b986b32a2cfd" width="30%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/363ee99c-663d-4385-bd54-fbf55dbfff22" width="30%">
+</p>
 
-### 카카오 간편 로그인 
+### 🔜 카카오 간편 로그인 
 - 회원가입 후 개인정보수정에서 카카오 간편 로그인 연결 및 해제 가능
   #### 연결
   <p width="100%">
@@ -150,14 +159,25 @@
    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/cda301c7-f20d-4630-bf92-3187f5db950a" width="45%" height="250">
   </p>
 
+## 🗓️ **spring Boot scheduler (홈- 광고화면)**
+- 현재 기준 광고 시작일 이후 광고 만료일 이전일 때
+    - 매일 0 시 , 광고 시작일/ 종료일에 따라 설정
+<p width="100%">
+ <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/b9456628-71f9-41fb-a550-db27cf0e6aa4" width="50%">
+</p>
+
+
 ## 도메인 , 서버, 배포
-### 도메인 구매 (가이아, moviesq.herrykim.com)
-###  DNS (Cloudflare)
-### 서버 구축 및 배포 (GCP,Google Cloud Platform)
+#### 도메인 구매 (가이아, moviesq.herrykim.com)
+#### DNS (Cloudflare)
+#### 서버 구축 및 배포 (GCP,Google Cloud Platform)
+
+---
 
 ## 🚨 오류 수정 및 리팩토링
 
-1️⃣ **문제점 : 동일한 날짜의 영화 스케쥴 1개만 보임**
+### **1️⃣문제점 : 동일한 날짜의 영화 스케쥴 1개만 보임**
+
 - **파악**
     - 모든 예매 스케쥴  1개만 보임 → 동일한 영화,상영관,날짜 다른 시간의 스케쥴 2개 추가 후 다시  확인하였으나 1개만 보이는 상황 발견
 - **해결방안:** SQL 쿼리 수정 (Group by 잘못된 설정)
@@ -179,23 +199,22 @@
     			`C`.`title_ko` = #{movieName} &&
     			DATE_FORMAT(`A`.`time_start`, '%Y-%m-%d') = #{timeName} &&
     			`A`.`time_start` > NOW()
-    GROUP BY `E`.`schedule_index`;**
+    GROUP BY `E`.`schedule_index`;
     ```
     
     - **수정**
-    
+      <p width="100%">
+       <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/bdab8975-e733-4439-bddc-cce9949c9939" width="">
+      </p>
     ```sql
      --동일함
-    GROUP BY  A.`index`, `runningTime`, `screenName`, `seatTotal`;**
-    ```    
-   
-  <p width="100%">
- <img src="" width="">
-</p>
+    GROUP BY  A.`index`, `runningTime`, `screenName`, `seatTotal`;
+    ```      
 
 
 
-2️⃣ **문제점 : 회원가입 없이 카카오 간편 로그인 진행 어려움**
+
+### **2️⃣문제점 : 회원가입 없이 카카오 간편 로그인 진행 어려움**
 > - DB User의 contact column NOT NULL 설정
 > - User 테이블의 contact 칼럼과  contact_code 테이블의 contact 칼럼과 FK 설정    
 >    → 사용자의 연락처 인증, 연락처 정보 없이 회원등록 불가능!   
@@ -208,12 +227,14 @@
     - 연결 해제시 kakao_linked flag false 변경
     - 각 상황에 따른 popUp 보여주도록 설정
 
-3️⃣ **문제점 : 영화예매 번호 랜덤 생성 → 번호 중복 가능성 확인**
+
+
+### **3️⃣문제점 : 영화예매 번호 랜덤 생성 → 번호 중복 가능성 확인**
 - **파악**
     - 코드 재확인 과정에서 사용자가 많으면 중복될 수 도 있지 않을까 하는 생각을 함
     - 다음의 코드를 통해 중복 가능성 확인   
    <p width="100%">
-    <img src="" width="">
+    <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/09f49d95-01f2-4296-80bb-879f6482afdb" width="60%">
    </p>
 
 - **해결방안 : 번호 중복 확인하는 메서드 추가**
@@ -232,11 +253,13 @@
             return ticketNumber;
     	    }
     ```
+    
 
-4️⃣ **문제점 : 홈 로딩 지연**
+### **4️⃣ 문제점 : 홈 로딩 지연**
+- **파악**
+    - 로컬서버에서 메인화면 접근시 TOP10보다 광고화면이 늦게 로딩되는 상황 발견함 
 - **해결방안 1**
-    - 광고 화면 부트스트랩 캐러셀 형식 활용        
-        → 부트스트랩에서 제공하는 요소에 대한 설정된 속성에 대한 분석과 이해
+    - 광고 화면 → 부트스트랩 캐러셀 형식 활용 → 부트스트랩에서 제공하는 요소에 대한 설정된 속성에 대한 분석과 이해
     - **`thymeleaf:each`** 의 count, index속성, **`thymeleaf:attr`** 활용
 - **해결방안 2**
     - 기존 : TOP10 예고편 팝업 10개 모두 가져오기
@@ -244,11 +267,11 @@
 - **결과**
     - **변경 전**
       <p width="100%">
-       <img src="" width="">
+       <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/56f0e889-fc7f-4a1f-89b3-729baae8d824" width="">
       </p>
     - **변경 후**
       <p width="100%">
-       <img src="" width="">
+       <img src="https://github.com/hyeleeKim/projectMoviesq/assets/128495690/42b09695-b90f-4cd9-a348-d07235cce952" width="">
       </p>
       
         -> **DOMContentLoaded**: 4.45s -> 3.45s 약 22% 감소
